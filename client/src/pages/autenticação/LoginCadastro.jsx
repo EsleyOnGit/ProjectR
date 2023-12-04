@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import auth from "./firebase";
+//import Cadastro from "./RegistryPage";
 
 const LoginCadastro = () => {
   const [email, setEmail] = useState("");
@@ -70,7 +71,7 @@ const LoginCadastro = () => {
       
       <p>
         {isLogin ? "Não tem uma conta?" : "Já tem uma conta?"}
-        <Link to="#" onClick={handleToggle}>
+        <Link to="/cadastro" onClick={handleToggle}>
           {isLogin ? "Cadastre-se" : "Faça login"}
         </Link>
       </p>

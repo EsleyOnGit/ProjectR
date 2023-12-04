@@ -12,6 +12,7 @@ import DeleteProduct from './pages/DeleteProduct';
 import EditProduct from './pages/EditProduct';
 import ShowProducts from './pages/ShowProducts';
 import NotFound from './pages/NotFound';
+import Cadastro from './pages/autenticação/RegistryPage';
 
 // Rota de erro - corresponderá a todas as URLs não correspondidas
 // R
@@ -24,6 +25,7 @@ function App() {
         <Route path="/delete" element={<DeleteProduct />} />
         <Route path="/edit" element={<EditProduct />} />
         <Route path="/show" element={<ShowProducts />} />
+        <Route path="/cadastro" element={<Cadastro />} />
         {/* Rota de erro - corresponderá a todas as URLs não correspondidas */}
         <Route component={NotFound} />
       </Routes>
