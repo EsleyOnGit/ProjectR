@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Card } from 'react-bootstrap';
 
 const EditProduct = () => {
+
   const [productId, setProductId] = useState('');
   const [newProductName, setNewProductName] = useState('');
   const [newProductPrice, setNewProductPrice] = useState(0);
@@ -10,11 +11,20 @@ const EditProduct = () => {
 
   const handleEditProduct = async () => {
     try {
+      // Verifique se o productId está definido corretamente antes da requisição
+      if (!productId) {
+        alert('Por favor, forneça um ID de produto válido.');
+        return;
+      }
+
+      console.log({ productId, newProductName, newProductPrice, newProductDescription });
+
       await axios.put(`http://localhost:5000/edit-product/${productId}`, {
-        name: newProductName,
-        price: newProductPrice,
-        description: newProductDescription,
+        newProductName,
+        newProductPrice,
+        newProductDescription,
       });
+
       alert('Produto editado com sucesso!');
       setProductId('');
       setNewProductName('');
