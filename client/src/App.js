@@ -10,7 +10,10 @@ import AddProduct from './pages/AddProduct';
 import DeleteProduct from './pages/DeleteProduct';
 import EditProduct from './pages/EditProduct';
 import ShowProducts from './pages/ShowProducts';
+import NotFound from './pages/NotFound';
 
+// Rota de erro - corresponderá a todas as URLs não correspondidas
+// R
 function App() {
   return (
     <Router>
@@ -19,6 +22,8 @@ function App() {
         <Route path="/delete" element={<DeleteProduct />} />
         <Route path="/edit" element={<EditProduct />} />
         <Route path="/show" element={<ShowProducts />} />
+        {/* Rota de erro - corresponderá a todas as URLs não correspondidas */}
+        <Route component={NotFound} />
       </Routes>
     </Router>
   );

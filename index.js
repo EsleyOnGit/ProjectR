@@ -39,6 +39,7 @@ app.put('/edit-product/:id', async (req, res) => {
     const { newProductName } = req.body;
     await Product.update({ name: newProductName }, { where: { id: productId } });
     res.send('Produto editado com sucesso!');
+    
   } catch (error) {
     console.error('Erro ao editar produto:', error);
     res.status(500).send('Erro ao editar produto. Consulte o console para obter detalhes.');

@@ -5,7 +5,7 @@ import { Card } from 'react-bootstrap';
 const EditProduct = () => {
   const [productId, setProductId] = useState('');
   const [newProductName, setNewProductName] = useState('');
-  const [newProductPrice, setNewProductPrice] = useState('');
+  const [newProductPrice, setNewProductPrice] = useState(0);
   const [newProductDescription, setNewProductDescription] = useState('');
 
   const handleEditProduct = async () => {
@@ -34,7 +34,7 @@ const EditProduct = () => {
       <div className="product-list-edit">
         <label>ID do Produto:</label>
         <input
-          type="text"
+          type="number"
           placeholder="ID do Produto"
           value={productId}
           onChange={(e) => setProductId(e.target.value)}
@@ -52,7 +52,7 @@ const EditProduct = () => {
       <div className="product-list-edit">
         <label>Novo Preço do Produto:</label>
         <input
-          type="text"
+          type="number"
           placeholder="Novo Preço do Produto"
           value={newProductPrice}
           onChange={(e) => setNewProductPrice(e.target.value)}
