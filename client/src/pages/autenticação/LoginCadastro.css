@@ -1,0 +1,32 @@
+/* LoginCadastro.css */
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .form-container {
+    width: 100%; 
+    border: 2px solid white;
+    border-radius: .4rem;
+  }
+  
+  .img-container {
+    width: 100%; 
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  

@@ -1,7 +1,13 @@
 /* styles.css */
+body{
+    background-color: #2e85139f;
+    
+}
 form {
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
+    border: 1px solid #4caf4f7a;
+    border-radius: .5rem;
   }
   
   label {
@@ -12,12 +18,21 @@ form {
   input {
     width: 100%;
     padding: 8px;
+    background-color: #c9ccc98e;
     margin-bottom: 10px;
+    border-radius: .4rem;
+    border: 2px solid #45a049
   }
+
+input:hover {
+    background-color: #7fdf84;
+    border: 2px solid #f5f5f5;
+}
   
   button {
     padding: 10px;
     background-color: #4caf50;
+    border-radius: .5rem;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -25,5 +40,35 @@ form {
   
   button:hover {
     background-color: #45a049;
+    border: 2px solid #f5f5f5;
   }
+
+  .principal div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .esquerda div{
+    color: #0000ff;
+    width: 600px;
+    height: 600px;
+    display: flexbox;
+  }
+
+  img{
+    border-radius: .7rem;
+    display: flex;
+  }
+
+  .conjunto div:nth-child(3) {
+    background: #0000ff; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #0000ff 0%, #ffff00 50%, #00ff00 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0000ff), color-stop(50%,#ffff00), color-stop(100%,#00ff00)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #0000ff 0%,#ffff00 50%,#00ff00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #0000ff 0%,#ffff00 50%,#00ff00 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #0000ff 0%,#ffff00 50%,#00ff00 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #0000ff 0%,#ffff00 50%,#00ff00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#00ff00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+}
   
